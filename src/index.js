@@ -64,6 +64,6 @@ app.post("/", async (req, res) => {
   }
 });
 
-app.listen(8000, (req, res) => {
+app.listen(process.env.PORT || 8000, (req, res) => {
   console.log("server is listinig at :8000");
 });
