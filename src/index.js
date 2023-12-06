@@ -33,7 +33,7 @@ app.post("/", async (req, res) => {
         
         if(items.extracted_x.includes(word)){
             extractedWords.push({
-                extracted_x:items.extracted_x,
+                 
                 prerequisitetaxonomy:items.prerequisitetaxonomy,
                
             })
