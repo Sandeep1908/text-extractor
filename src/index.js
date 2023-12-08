@@ -33,15 +33,14 @@ app.post("/", async (req, res) => {
         
         if(items.extracted_x.includes(word)){
             extractedWords.push({
-                 
                 prerequisitetaxonomy:items.prerequisitetaxonomy,
-               
             })
         }
        })
     })
 
 
+    
     const removeDuplicates = (arr, key) => {
         const seen = new Set();
         return arr.filter((obj) => {
@@ -54,9 +53,9 @@ app.post("/", async (req, res) => {
         });
       };
 
-      const resultArray = removeDuplicates(extractedWords, "extracted_x");
+      const resultArray = removeDuplicates(extractedWords, "prerequisitetaxonomy");
       
-
+      
 
     res.json({ result: resultArray.slice(0,2)});
   } catch (error) {
